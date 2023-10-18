@@ -1,0 +1,321 @@
+html {
+    background-image: url('CompanyPics/AriadneRoboticsBackground.png');
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 2rem;
+}
+
+html, body {
+    height: 100%;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Reset default margin */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.content {
+    flex: 1; /* This will allow the content to expand and push the footer down */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: purple;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 10%;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: purple;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8a2be2;
+}
+
+#robot-illustration {
+    max-width: 70%; /* Adjust according to your preference */
+    margin-top: 2em; /* Spacing between the text and the robot image */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.5rem; /* Add padding as necessary */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 3rem; /* Adjust the width as necessary */
+    height: auto;
+}
+
+.logo-text {
+    font-size: 18px; /* Adjust the font size as necessary */
+    margin-left: 10px; /* Adjust the margin as necessary */
+}
+
+nav a {
+    margin: 0 15px; /* Adjust the margin as necessary */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+
+
+.project {
+    margin: 1.25rem 0;
+    padding-bottom: 1.25rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap; /* To allow images to wrap to the next row if there's not enough space */
+    justify-content: center;
+    padding-bottom: 1.25rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    margin: 5rem;
+}
+
+.photo-gallery img {
+    width: 50rem;
+    box-shadow: 0 0.25rem 0.50rem rgba(0, 0, 0, 0.1); /* Optional: Adding a shadow for aesthetics */
+    border-radius: 0.25; /* Optional: Rounding the corners for aesthetics */
+    transition: transform 0.3s; /* Smooth zoom effect on hover */
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* This will create 4 columns of equal width */
+    gap: 1rem;  /* This sets the gap between the grid items */
+}
+
+.photo-gallery img {
+    width: 100%;  /* This ensures that the image takes up the full width of its grid cell */
+    height: 12.5rem;  /* This maintains the original aspect ratio of the image */
+    object-fit: cover;
+    cursor: pointer; /* Makes it obvious to users they can click the image */
+    transition: transform 0.2s; /* Optional: smooth transition for hover effect */
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;  
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-background {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;  /* Optional: Adds rounded corners */
+}
+
+.static-navbar {
+    position: fixed;  /* This will make the navbar fixed at its position */
+    top: 0;  /* This will make sure the navbar is at the top of the viewport */
+    left: 0;  /* This ensures the navbar starts at the leftmost side of the viewport */
+    width: 100%;  /* This ensures the navbar spans the full width of the viewport */
+    z-index: 1000;  /* This will place the navbar above most other elements */
+    background: linear-gradient(to bottom, rgba(50, 11, 102, 1) 0%, rgb(25, 6, 51, 0.8) 95%, rgb(0, 0, 0, 0) 100%);
+  /* Use the navbar's background color in the gradient */
+}
+
+
+.static-navbar::before {
+    content: "";
+    position: absolute;
+    top: -50px;  /* This value might need adjustments */
+    left: 0;
+    right: 0;
+    height: 50px;  /* This defines how tall the fade effect is */
+    background: linear-gradient(to bottom, rgba(50, 11, 102, 1),rgba(244, 238, 251, 0.879));  /* Assuming your page's background color is white */
+    pointer-events: none; /* Makes sure this element won't interfere with any user interactions */
+    z-index: 999; /* Make sure it's below the navbar but above the content */
+}
+
+.main-content {
+    z-index: 998; /* The content is below the navbar and its pseudo-element */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+  }
+  
+  main {
+    flex: 1; /* takes up all available space pushing footer to the bottom */
+  
+}
+
+.abc {
+    margin-top: 11.25rem; /* or you can use padding-top if you prefer */
+}
+
+.mn-pg{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.contact-info {
+    height: 100vh; /* takes full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers content vertically */
+    align-items: center; /* centers content horizontally */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 15px 20px;
+    color: #333;
+    transition: color 0.3s;
+    font-size: 18px;
+    text-decoration: none;  /* this line removes the underline from links */
+}
+
+
+.social-links a {
+    display: block;
+    margin: 15px 0;
+    color: #ffffff;
+    transition: color 0.3s;
+    z-index: 1000;
+}
+
+.social-links a:hover {
+    color: #8a2be2;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* same height as your image */
+    z-index: 10; /* This ensures particles appear above the image */
+}
+
+.top{
+    z-index: 10000;
+}
+
+.toptop{
+    z-index: 100000;
+}

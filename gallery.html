@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ariadne Robotics | Gallery</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body class="container">
+    <div id="particles-js"></div>
+    <header class="static-navbar">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="CompanyPics/AriadneRoboticsLogo.png" alt="Logo" class="logo" />
+                <span class="logo-text">ARIADNE ROBOTICS</span>
+            </div>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="socialmedia.html">SOCIAL MEDIA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content text-shadow text-background">
+    	<h1>Project Gallery</h1>
+
+    	<section class="project">
+        	<h2>Ariadne</h2>
+        	<p>Drawing inspiration from the rich tapestry of Greek mythology, we proudly present "Ariadne" — a masterful embodiment of the legendary princess from the tale of the Labyrinth of the Minotaur. Ariadne is not merely a robot; she represents a harmonious fusion of innovative craftsmanship and age-old legends.
+
+                Every component of Ariadne epitomizes cutting-edge innovation. Entirely sculpted using advanced 3D printing, from the intricate mechanisms to its sleek mold, showcases the future of design. Its face, capturing the serene beauty of its namesake, is crafted with theme park-grade silicone, Ecoflex from Smooth-On, offering a touch of lifelike realism. The painstakingly punched eyebrows and hair lend her a touch of authenticity, making her visage all the more striking.
+
+                Her in-house designed dress, rich with Grecian motifs, complements her state-of-the-art build. And while her appearance is breathtaking, Ariadne's capabilities are equally impressive. Being fully electrical, she is a testament to the marvels of modern robotics intertwined with artistic finesse.
+
+                Experience Ariadne — where mythology, technology, and artistry converge.</p>
+
+        	<div class="photo-gallery">
+         	   <img src="Gallery\AriadneProfile.jpg" alt="Ariadne Profile">
+          	   <img src="Gallery\AriadneSkin.jpg" alt="Ariadne Skin">
+               <img src="Gallery\AriadneMechs.jpg" alt="Ariadne Mechs">
+               <img src="Gallery/AriadneSkinPainting.jpg" alt="Ariadne's Skin Painting Process">
+               <img src="Gallery/AriadneSkinProfile.jpg" alt="Ariadne Skin Profile">
+               <img src="Gallery/AriadneEyeMech.jpg" alt="AriadneEyeMech">
+               <img src="Gallery/AriadneHead.jpg" alt="Ariadne's Head">
+               <img src="Gallery/AriadneFullBody.jpg" alt="Ariadne Full Body">
+           	 
+       	 	</div>
+   	    </section>
+
+    	<section class="project">
+     	  <h2>Telemachus: New Project</h2>
+      	  <p>Telemachus: The Pneumatic Marvel
+
+            Introducing "Telemachus", our latest foray into the world of animatronics. Unlike its predecessors, Telemachus heralds a new age of pneumatic animatronics, offering a fresh perspective on motion dynamics and realism.
+            
+            Constructed with a robust metal frame, Telemachus is built to last. We've sourced the finest industrial-grade parts to ensure its durability, allowing it to withstand the test of time and deliver consistent, lifelike movements. But its strength doesn't compromise its beauty.
+            
+            Telemachus is adorned with a meticulously crafted, theme park-grade silicone skin, lending it an unparalleled realism that's sure to captivate any observer. The painstakingly punched hair adds another layer of authenticity, showcasing our commitment to detail and the pursuit of perfection.
+            
+            Discover Telemachus, where engineering prowess meets artistry, redefining the boundaries of what animatronics can achieve.</p>
+
+       	 <div class="photo-gallery">
+       	     <img src="Gallery/TelemachusHeadRender.jpg" alt="Telemachus Head Render">
+         	 <img src="Gallery/TelemachusMechs.png" alt="Telemachus Mechs">
+             <img src="Gallery/TelemachusMockHead.jpg" alt="Telemachus Mock Head">
+       	 </div>
+    	</section>
+
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="jsfiles/gallery.js"></script>
+
+    <footer class="text-shadow text-background">
+        <div class="footer-content">
+            <p>&copy; 2023 Ariadne Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    
+</body>
+
+</html>
