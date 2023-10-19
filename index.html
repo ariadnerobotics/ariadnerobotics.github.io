@@ -10,7 +10,7 @@
     <title>Ariadne Robotics</title>
 </head>
 
-<body class="container">
+<body class="container main-body">
     <div id="particles-js"></div>
 
     <header class="static-navbar">
@@ -162,6 +162,18 @@
         
     </script>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                const sloganElem = document.querySelector('.company-slogan');
+                sloganElem.classList.add('light-beam');
+            }, 2500); // This delay ensures that the slogan appears 2.5 seconds after the page loads.
+        });
+    </script>
+    
+    <script>
+       
+    </script>
     
     
 </body>

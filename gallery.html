@@ -27,7 +27,9 @@
     </header>
 
     <main class="main-content text-shadow text-background">
-    	<h1>Project Gallery</h1>
+        <div class="company-name">
+            <h1>Project Gallery</h1>
+        </div>
 
     	<section class="project">
         	<h2>Ariadne</h2>
@@ -151,7 +153,23 @@
             "retina_detect": true
         });
     </script>
-    
+    <script>
+        const text = "Gallery Title";
+        const output = document.getElementById("typed-output");
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                output.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 150); // adjust speed as needed
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            typeText();
+        });
+    </script>
 </body>
 
 </html>

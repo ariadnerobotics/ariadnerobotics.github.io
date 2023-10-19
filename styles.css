@@ -25,6 +25,10 @@ body {
     overflow-x: hidden;
 }
 
+.main-body{
+    overflow: hidden; /* Prevents scrolling during animation */
+}
+
 .content {
     flex: 1; /* This will allow the content to expand and push the footer down */
 }
@@ -48,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: purple;
+    color: #320b66d9;
 }
 
 h1 {
@@ -64,7 +68,7 @@ p {
 button {
     margin-top: 30px;
     padding: 10px 20px;
-    background-color: purple;
+    background-color: #320b66d9;
     border: none;
     color: white;
     cursor: pointer;
@@ -326,7 +330,7 @@ footer {
     display: inline-block;
     background: none; /* Ensure there's no background */
     animation: glowEffect 1.5s infinite alternate; /* Apply the glow animation */
-    color: purple; /* Set the text color */
+    color: #320b66d9; /* Set the text color */
     text-shadow: none; /* Reset any text shadow to avoid conflicts */
 }
 
@@ -351,9 +355,104 @@ footer {
 
 @keyframes glowEffect {
     0% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #320b66d9, 0 0 20px #320b66d9, 0 0 25px #320b66d9, 0 0 30px #320b66d9, 0 0 35px #320b66d9;
     }
     100% {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple, 0 0 40px purple, 0 0 45px purple, 0 0 50px purple, 0 0 55px purple;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #320b66d9, 0 0 30px #320b66d9, 0 0 35px #320b66d9, 0 0 40px #320b66d9, 0 0 45px #320b66d9, 0 0 50px #320b66d9, 0 0 55px #320b66d9;
     }
+}
+
+@keyframes beamOfLight {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+        filter: brightness(500%);
+    }
+    50% {
+        filter: brightness(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: brightness(100%);
+    }
+}
+
+.company-slogan {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    filter: brightness(100%);
+}
+
+.company-slogan.light-beam {
+    animation: beamOfLight 2.5s forwards;
+}
+
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.link-text {
+    font-size: 24px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #320b66d9, 0 0 40px #320b66d9, 0 0 50px #320b66d9, 0 0 60px #320b66d9, 0 0 70px #320b66d9;
+    animation: floating 2s infinite;
+}
+.floating-light {
+    position: absolute;
+    background: radial-gradient(ellipse at center,#320b66d9, transparent);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: floating 1.5s infinite alternate;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+@keyframes shimmer {
+    0%, 37.5% { color: white; background-position: -100% 0; }
+    50% { color: rgba(255, 255, 255, 0.5); background-position: 100% 0; }
+    62.5%, 100% { color: white; }
+}
+
+.social-title {
+    font-size: 36px;
+    color: #320b66d9;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 2s infinite;
+}
+
+
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #9c27b0, 0 0 10px #9c27b0; }
+    50% { text-shadow: 0 0 20px #9c27b0, 0 0 30px #9c27b0; }
+    100% { text-shadow: 0 0 5px #9c27b0, 0 0 10px #9c27b0; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.title-banner-gallery {
+    font-size: 4em;
+    color: purple;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    text-align: center;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: glowing 2s infinite, typing 4s steps(30, end) forwards;
+    width: 0;
 }
