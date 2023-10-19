@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html {
     background-image: url('CompanyPics/AriadneRoboticsBackground.png');
     background-size: cover;
@@ -9,6 +11,7 @@ html {
 
 html, body {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
@@ -17,7 +20,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0; /* Reset default margin */
-    font-family: Arial, sans-serif;
     color: #fff;
     text-align: center;
     overflow-x: hidden;
@@ -318,4 +320,40 @@ footer {
 
 .toptop{
     z-index: 100000;
+}
+
+.company-name h1 {
+    display: inline-block;
+    background: none; /* Ensure there's no background */
+    animation: glowEffect 1.5s infinite alternate; /* Apply the glow animation */
+    color: purple; /* Set the text color */
+    text-shadow: none; /* Reset any text shadow to avoid conflicts */
+}
+
+@keyframes revealText {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple, 0 0 40px purple, 0 0 45px purple, 0 0 50px purple, 0 0 55px purple;
+    }
 }

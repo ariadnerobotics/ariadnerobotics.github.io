@@ -109,6 +109,60 @@
         });
     </script>
     
+    <script>
+        const companyNameElem = document.querySelector('.company-name h1');
+        companyNameElem.style.opacity = '1'; 
+        let text = companyNameElem.innerText;
+        companyNameElem.innerText = "";
+        let index = 0;
+    
+        function typeText() {
+            if (index < text.length) {
+                companyNameElem.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeText, 150);  // Adjust speed by changing the timeout value
+            }
+        }
+    
+        setTimeout(() => {
+            typeText();
+        }, 100);  // This delay ensures that the reveal animation completes first
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            animateCompanyName();
+        });
+        
+        function animateCompanyName() {
+            const companyNameElem = document.querySelector('.company-name h1');
+            companyNameElem.style.opacity = '1'; 
+            let headerText = companyNameElem.innerText;
+            companyNameElem.innerText = "";
+            let charIndex = 0;
+        
+            function typeText() {
+                if (charIndex < headerText.length) {
+                    companyNameElem.innerHTML += headerText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, 150);
+                } else {
+                    startLoopingAnimation();
+                }
+            }
+        
+            function startLoopingAnimation() {
+                companyNameElem.style.animation = "glowEffect 3s infinite alternate";
+            }
+        
+            setTimeout(() => {
+                typeText();
+            }, 2000);
+        }
+        
+    </script>
+    
+    
     
 </body>
 
