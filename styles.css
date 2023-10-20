@@ -655,6 +655,7 @@ nav a {
 
 /* For smaller devices */
 @media (max-width: 768px) {
+    
     .photo-gallery {
         grid-template-columns: repeat(2, 1fr);
         margin-left: 1rem;
@@ -688,7 +689,9 @@ nav a {
     .company-name h1 {
         font-size: 2rem;
     }
-    .company-slogan {
-        font-size: 1.5rem !important;
+    .main-slogan {
+        font-size: 1rem !important;
+        padding: 1rem;
     }
 }
+
