@@ -15,6 +15,14 @@ html, body {
     
 }
 
+.main-slogan {
+    font-size: 1.5rem;
+}
+
+.company-slogan {
+    font-size: 1.2rem !important;
+}
+
 button {
     background: none;
 }
@@ -28,6 +36,8 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+
+
 
 .main-body{
     overflow: hidden; /* Prevents scrolling during animation */
@@ -588,7 +598,7 @@ nav a {
     }
 
     .company-slogan p {
-        font-size: 14px; 
+        font-size: 1.2rem; 
     }
 }
 
@@ -598,6 +608,7 @@ nav a {
         margin-top: 3.125rem; /* This will push the content down by 50px; adjust as needed */
         padding-bottom: 3.125rem; /* This will push the content up by 50px; adjust as needed */
     }
+    
 }
 
 .project-description {
@@ -669,5 +680,15 @@ nav a {
         padding-bottom: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .company-name h1 {
+        font-size: 2rem;
+    }
+    .company-slogan {
+        font-size: 1.5rem !important;
     }
 }
