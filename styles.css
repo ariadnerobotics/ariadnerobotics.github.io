@@ -15,6 +15,10 @@ html, body {
     
 }
 
+button {
+    background: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -38,6 +42,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.static-navbar{
+    padding: 0.7rem 0;
 }
 
 nav {
@@ -68,16 +76,12 @@ p {
 button {
     margin-top: 30px;
     padding: 10px 20px;
-    background-color: #320b66d9;
     border: none;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #8a2be2;
-}
 
 #robot-illustration {
     max-width: 70%; /* Adjust according to your preference */
@@ -455,4 +459,166 @@ footer {
     overflow: hidden;
     animation: glowing 2s infinite, typing 4s steps(30, end) forwards;
     width: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default on larger screens */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+}
+
+
+
+/* Mobile styles */
+@media screen and (max-width: 1000px) { /* Adjust this breakpoint as needed */
+    nav {
+        margin: 0;
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #320b66d9; 
+        border: 1px solid #320b66d9;
+        width: 100%;
+    }
+  
+    
+    nav a {
+        margin: 0;
+        padding: 30 50;
+        display: block; /* Makes anchor tags block-level elements */
+        width: 100%; /* Ensures each anchor spans the full width */
+        text-align: center; /* Centers the text within the anchors */
+         /* Some padding for better visual appeal */
+        border-bottom: 1px solid #ccc; /* Adds a border between the items */
+        
+    }
+    
+    button{
+        margin-top: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    button:hover {
+        color: #8a2be2;
+    }
+    
+    .menu-toggle {
+        margin: 7px 0;
+        display: block;
+    }
+
+     /* Default state without blur */
+     .body-blurred main,
+     .body-blurred header,
+     .body-blurred footer,
+     .body-blurred #particles-js {
+         filter: none;
+     }
+ 
+     /* When menu is toggled, apply blur */
+     
+     .menu-active body,
+     .menu-active main,
+     .menu-active footer,
+     .menu-active #particles-js {
+         filter: blur(2px); /* Adjust the blur value as per your preference */
+         pointer-events: none; /* Disables any interaction with blurred elements */
+         user-select: none; /* Prevents any text or element selection */
+     }
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        display: block !important; /* Overrides the JavaScript toggle */
+    }
+
+    .menu-toggle {
+        display: none; /* Hides the hamburger icon on larger screens */
+    }
+}
+
+/* Smaller font size for screens less than 600px wide */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 12px; 
+    }
+
+    .company-slogan p {
+        font-size: 14px; 
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin-top: 3.125rem; /* This will push the content down by 50px; adjust as needed */
+        padding-bottom: 3.125rem; /* This will push the content up by 50px; adjust as needed */
+    }
+}
+
+.project-description {
+    text-align: center;
+    line-height: 2.7rem;
+}
+
+
+@media (max-width:700px)
+{
+    .gallery-title{
+        font-size: 3rem;
+    }
+    .social-media-title{
+        font-size: 3rem;
+    }
+    .project{
+        padding-right: 1rem;
+        padding-left: 1rem;  
+    }
+    
+    .project-description{
+        text-align: left;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
 }

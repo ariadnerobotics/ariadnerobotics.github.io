@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <title>Ariadne Robotics | Gallery</title>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
+
+
 
 <body class="container">
     <div id="particles-js"></div>
@@ -18,6 +21,9 @@
                 <img src="CompanyPics/AriadneRoboticsLogo.png" alt="Logo" class="logo" />
                 <span class="logo-text">ARIADNE ROBOTICS</span>
             </div>
+            <button class="menu-toggle">
+                &#9776; <!-- This is an HTML entity for a hamburger icon -->
+            </button>
             <nav>
                 <a href="index.html">HOME</a>
                 <a href="gallery.html">GALLERY</a>
@@ -28,12 +34,13 @@
 
     <main class="main-content text-shadow text-background">
         <div class="company-name">
-            <h1>Project Gallery</h1>
+            <h1 class="gallery-title">Project Gallery</h1>
         </div>
 
     	<section class="project">
         	<h2>Ariadne</h2>
-        	<p>Drawing inspiration from the rich tapestry of Greek mythology, we proudly present "Ariadne" — a masterful embodiment of the legendary princess from the tale of the Labyrinth of the Minotaur. Ariadne is not merely a robot; she represents a harmonious fusion of innovative craftsmanship and age-old legends.
+            
+        	<p class="project-description">Drawing inspiration from the rich tapestry of Greek mythology, we proudly present "Ariadne" — a masterful embodiment of the legendary princess from the tale of the Labyrinth of the Minotaur. Ariadne is not merely a robot; she represents a harmonious fusion of innovative craftsmanship and age-old legends.
 
                 Every component of Ariadne epitomizes cutting-edge innovation. Entirely sculpted using advanced 3D printing, from the intricate mechanisms to its sleek mold, showcases the future of design. Its face, capturing the serene beauty of its namesake, is crafted with theme park-grade silicone, Ecoflex from Smooth-On, offering a touch of lifelike realism. The painstakingly punched eyebrows and hair lend her a touch of authenticity, making her visage all the more striking.
 
@@ -52,11 +59,13 @@
                <img src="Gallery/AriadneFullBody.jpg" alt="Ariadne Full Body">
            	 
        	 	</div>
-   	    </section>
 
+                
+        </section>
     	<section class="project">
      	  <h2>Telemachus: New Project</h2>
-      	  <p>Telemachus: The Pneumatic Marvel
+        
+      	  <p class="project-description">Telemachus: The Pneumatic Marvel
 
             Introducing "Telemachus", our latest foray into the world of animatronics. Unlike its predecessors, Telemachus heralds a new age of pneumatic animatronics, offering a fresh perspective on motion dynamics and realism.
             
@@ -74,6 +83,8 @@
     	</section>
 
     </main>
+
+    
 
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
@@ -170,6 +181,23 @@
             typeText();
         });
     </script>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            const body = document.querySelector('body');
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+                body.classList.remove('menu-active');
+            } else {
+                nav.style.display = 'block';
+                body.classList.add('menu-active');
+            }
+        });
+        
+    </script>
+
+
 </body>
 
 </html>
