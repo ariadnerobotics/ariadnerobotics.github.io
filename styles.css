@@ -414,7 +414,6 @@ footer {
 .link-text {
     font-size: 24px;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #320b66d9, 0 0 40px #320b66d9, 0 0 50px #320b66d9, 0 0 60px #320b66d9, 0 0 70px #320b66d9;
-    animation: floating 2s infinite;
 }
 .floating-light {
     position: absolute;
