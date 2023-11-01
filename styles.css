@@ -694,3 +694,68 @@ nav a {
     }
 }
 
+@media screen and (min-width: 0px) and (max-width: 285px) {
+    .logo-text {
+        margin-left: 0rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 285px) and (max-width: 360px) {
+    .logo-text {
+        margin-left: 1rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 360px) and (max-width: 395px) {
+    .logo-text {
+        margin-left: 0.75rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 395px) and (max-width: 420px) {
+    .logo-text {
+        margin-left: 0.5rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 395px) and (max-width: 420px) {
+    .logo-text {
+        margin-left: 0.5rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 395px) and (max-width: 420px) {
+    .logo-text {
+        margin-left: 0.5rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 500) and (max-width: 545px) {
+    .logo-text {
+        margin-left: 10rem;  
+        padding-left: 0rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+
+
